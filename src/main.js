@@ -42,10 +42,10 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			Backbone.history.start();
 			console.log('Backbone history started');
 			//view
-			var todoView=new TodoView();
+			var todoView=new TodoView({ el: $("#helloWorld_container") });
 			
 			
-			/*
+			
 			//collection and model
 			var todos=new TodosCollection();
 			console.log('total items todo = '+todos.length);
@@ -56,7 +56,7 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			todos.add([t1,t2,t3]);
 			console.log(todos.length);
 			console.log(todos.at(0).get('title'));
-			*/
+			
 		});
 /*
 define("main", function(){
