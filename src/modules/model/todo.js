@@ -1,11 +1,16 @@
 define('modules/model/todo',function(){
 	//return 'Todo Model : Hello World.';
+	//backbone
 	var Todo = Backbone.Model.extend({
 	  // Default todo attribute values
+	  initialize: function(){
+	      console.log('This model has been initialized.');
+	  },
 	  defaults: {
-	    title: '',
+	    title: 'DefaultTitle',
 	    completed: false
 	  }
 	});
-	return Todo;
+	//end backbone
+	return Todo;//this is requireJS
 });
