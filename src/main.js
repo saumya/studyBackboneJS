@@ -34,25 +34,22 @@ function   (module) {
 	console.log('Hello World');
 });
 */
-require(['modules/addModule','modules/testModule','modules/model/todo'],function(addModule,testModule,TodoModel){
-	console.log(addModule);
-	console.log(testModule);
-	//console.log(TodoModel);
-	var todoModel=new TodoModel();
-	console.log(todoModel.get('title'));
-	console.log(todoModel.get('completed'));
-	todoModel.set("title", "myTitle");
-	todoModel.set("completed", true);
-	/*
-	console.log(todoModel.get('title'));
-	todoModel.set({ 
-	  title: "Both attributes set through Model.set().",
-	  completed: true
-	});
-	console.log(todoModel);
-	*/
-	
-});
+require(['modules/addModule','modules/testModule','modules/collection/todosCollection'],
+		function(addModule,testModule,TodosCollection){
+			/*
+			console.log(addModule);
+			console.log(testModule);
+			//console.log(TodoModel);
+			var todoModel=new TodoModel();
+			console.log(todoModel.get('title'));
+			console.log(todoModel.get('completed'));
+			todoModel.set("title", "myTitle");
+			todoModel.set("completed", true);
+			*/
+			//console.log(TodosCollection);
+			var todos=new TodosCollection();
+			console.log(todos);
+		});
 /*
 define("main", function(){
 	console.log('Hello World');
