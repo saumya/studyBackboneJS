@@ -1,4 +1,4 @@
-
+/*
 $.fn.alpha = function() {
     return this.append('<p>Alpha is Go!</p>');
 };
@@ -19,3 +19,28 @@ require(["jquery", "jquery.alpha", "jquery.beta"], function($) {
 });
 
 define("main", function(){});
+*/
+/*
+//config require
+requirejs.config({
+	baseUrl: 'js/vendor',
+	paths:{
+		app: '../../src'
+	}
+});
+// Start the main app logic.
+requirejs(['src/modules'],
+function   (module) {
+	console.log('Hello World');
+});
+*/
+require(['modules/addModule','modules/testModule','modules/model/todo'],function(addModule,testModule,TodoModel){
+	console.log(addModule);
+	console.log(testModule);
+	console.log(TodoModel);
+});
+/*
+define("main", function(){
+	console.log('Hello World');
+});
+*/
