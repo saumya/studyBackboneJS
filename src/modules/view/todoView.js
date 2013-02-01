@@ -24,6 +24,11 @@ define('modules/view/todoView',function(){
 		    //
 		    return this;
 		},
+		//Exposed methods to work from outside
+		doSomeWork: function(){
+			console.log('TodoView : doSomeWork : ');
+		},
+		//defining the el
 		el: $("#helloWorld_container"),
 		//Event handlers
 		onWholeElement:function(){

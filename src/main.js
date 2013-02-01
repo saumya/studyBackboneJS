@@ -42,6 +42,7 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			var onTodoViewSearchClick = function(obj){
 				console.log('Main : onTodoViewSearchClick : Handlign the custom event');
 				console.log(obj);
+				todoView1.doSomeWork();
 			};
 			
 			
