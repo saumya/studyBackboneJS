@@ -34,19 +34,11 @@ function   (module) {
 	console.log('Hello World');
 });
 */
-require(['modules/testModule','modules/collection/todosCollection','modules/model/todo'],
-		function(testModule,TodosCollection,TodoModel){
-			/*
-			console.log(addModule);
-			console.log(testModule);
-			//console.log(TodoModel);
-			var todoModel=new TodoModel();
-			console.log(todoModel.get('title'));
-			console.log(todoModel.get('completed'));
-			todoModel.set("title", "myTitle");
-			todoModel.set("completed", true);
-			*/
-			//console.log(TodosCollection);
+require(['modules/appRouter','modules/collection/todosCollection','modules/model/todo'],
+		function(ApplicationRouter,TodosCollection,TodoModel){
+			//instantiate the Router
+			var aRouter=new ApplicationRouter();
+			//collection and model
 			var todos=new TodosCollection();
 			console.log('total items todo = '+todos.length);
 			var t1=new TodoModel({title:'one'});
