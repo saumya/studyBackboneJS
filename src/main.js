@@ -38,6 +38,7 @@ require(['modules/addModule','modules/testModule','modules/model/todo'],function
 	console.log(addModule);
 	console.log(testModule);
 	console.log(TodoModel);
+	var todoModel=new TodoModel();
 });
 /*
 define("main", function(){
