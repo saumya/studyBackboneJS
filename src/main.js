@@ -34,8 +34,8 @@ function   (module) {
 	console.log('Hello World');
 });
 */
-require(['modules/addModule','modules/testModule','modules/collection/todosCollection'],
-		function(addModule,testModule,TodosCollection){
+require(['modules/testModule','modules/collection/todosCollection','modules/model/todo'],
+		function(testModule,TodosCollection,TodoModel){
 			/*
 			console.log(addModule);
 			console.log(testModule);
@@ -49,6 +49,13 @@ require(['modules/addModule','modules/testModule','modules/collection/todosColle
 			//console.log(TodosCollection);
 			var todos=new TodosCollection();
 			console.log('total items todo = '+todos.length);
+			var t1=new TodoModel({title:'one'});
+			var t2=new TodoModel({title:'two'});
+			var t3=new TodoModel();
+			t3.set('title','Three');
+			todos.add([t1,t2,t3]);
+			console.log(todos.length);
+			console.log(todos.get(2));
 		});
 /*
 define("main", function(){
