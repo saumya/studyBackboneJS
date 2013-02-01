@@ -23,6 +23,7 @@ define('modules/view/todoView',function(){
 		    //
 		    return this;
 		},
+		el: $("#helloWorld_container"),
 		//Event handlers
 		open:function(){
 			console.log('TodoView : open');

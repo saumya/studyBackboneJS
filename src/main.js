@@ -42,7 +42,7 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			Backbone.history.start();
 			console.log('Backbone history started');
 			//view
-			var todoView=new TodoView({ el: $("#helloWorld_container") });
+			var todoView=new TodoView();
 			
 			
 			
