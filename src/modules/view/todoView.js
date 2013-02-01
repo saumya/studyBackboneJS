@@ -6,7 +6,8 @@ define('modules/view/todoView',function(){
 		todoTpl: _.template($('#item-template').html()),// Cache the template function for a single item.
 		helloWorldTpl: _.template( $("#helloWorld-template").html(), {} ),
 		events: {
-			"click .icon": "open"
+			//"click": "onWholeElement",
+			"click #hello_button": "onButtonClick"
 		},
 		initialize: function(){
 			console.log('TodoView : initialize ');
@@ -25,9 +26,13 @@ define('modules/view/todoView',function(){
 		},
 		el: $("#helloWorld_container"),
 		//Event handlers
-		open:function(){
-			console.log('TodoView : open');
+		onWholeElement:function(){
+			console.log('TodoView : onWholeElement : click');
+		},
+		onButtonClick:function(){
+			console.log('TodoView : onButtonClick : click');
 		}
+		
 	});
 	//End backbone
 	return TodoView;
