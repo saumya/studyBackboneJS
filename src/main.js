@@ -55,7 +55,7 @@ require(['modules/testModule','modules/collection/todosCollection','modules/mode
 			t3.set('title','Three');
 			todos.add([t1,t2,t3]);
 			console.log(todos.length);
-			console.log(todos.get(2));
+			console.log(todos.at(0).get('title'));
 		});
 /*
 define("main", function(){
