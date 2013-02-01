@@ -34,13 +34,17 @@ function   (module) {
 	console.log('Hello World');
 });
 */
-require(['modules/appRouter','modules/collection/todosCollection','modules/model/todo'],
-		function(ApplicationRouter,TodosCollection,TodoModel){
+require(['modules/appRouter','modules/collection/todosCollection','modules/model/todo','modules/view/todoView'],
+		function(ApplicationRouter,TodosCollection,TodoModel,TodoView){
 			//instantiate the Router
 			var aRouter=new ApplicationRouter();
 			console.log('Router instantiated.');
 			Backbone.history.start();
 			console.log('Backbone history started');
+			//view
+			var todoView=new TodoView();
+			
+			
 			/*
 			//collection and model
 			var todos=new TodosCollection();
