@@ -38,6 +38,10 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 		function(ApplicationRouter,TodosCollection,TodoModel){
 			//instantiate the Router
 			var aRouter=new ApplicationRouter();
+			console.log('Router instantiated.');
+			Backbone.history.start();
+			console.log('Backbone history started');
+			/*
 			//collection and model
 			var todos=new TodosCollection();
 			console.log('total items todo = '+todos.length);
@@ -48,6 +52,7 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			todos.add([t1,t2,t3]);
 			console.log(todos.length);
 			console.log(todos.at(0).get('title'));
+			*/
 		});
 /*
 define("main", function(){

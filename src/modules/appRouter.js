@@ -6,8 +6,12 @@ define('modules/appRouter',function(){
 	    	"about" : "showAbout",
 	    	"comingUp" : "showComingUp"
 	    },
-		showAbout: function(){},
-		showComingUp: function(){}
+		showAbout: function(){
+			console.log('showAbout');
+		},
+		showComingUp: function(){
+			console.log('showComingUp');
+		}
 	});
 	return applicationRouter;
 });
