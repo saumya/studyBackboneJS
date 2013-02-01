@@ -48,7 +48,7 @@ require(['modules/addModule','modules/testModule','modules/collection/todosColle
 			*/
 			//console.log(TodosCollection);
 			var todos=new TodosCollection();
-			console.log(todos);
+			console.log('total items todo = '+todos.length);
 		});
 /*
 define("main", function(){
