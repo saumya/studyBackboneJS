@@ -31,6 +31,7 @@ define('modules/view/todoView',function(){
 		},
 		onButtonClick:function(){
 			console.log('TodoView : onButtonClick : click');
+			this.trigger('TodoView:SearchClick',this);
 		}
 		
 	});

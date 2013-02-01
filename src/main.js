@@ -36,6 +36,15 @@ function   (module) {
 */
 require(['modules/appRouter','modules/collection/todosCollection','modules/model/todo','modules/view/todoView'],
 		function(ApplicationRouter,TodosCollection,TodoModel,TodoView){
+			
+			
+			//The logic of the application
+			var onTodoViewSearchClick = function(obj){
+				console.log('Main : onTodoViewSearchClick : Handlign the custom event');
+				console.log(obj);
+			};
+			
+			
 			//instantiate the Router
 			var aRouter=new ApplicationRouter();
 			console.log('Router instantiated.');
@@ -43,6 +52,7 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			console.log('Backbone history started');
 			//view
 			var todoView1=new TodoView();
+			todoView1.on('TodoView:SearchClick',onTodoViewSearchClick);
 			
 			//collection and model
 			var todos=new TodosCollection();
@@ -54,6 +64,8 @@ require(['modules/appRouter','modules/collection/todosCollection','modules/model
 			todos.add([t1,t2,t3]);
 			console.log(todos.length);
 			console.log(todos.at(0).get('title'));
+			
+			
 			
 		});
 /*
