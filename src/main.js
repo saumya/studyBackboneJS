@@ -42,12 +42,15 @@ require(['modules/addModule','modules/testModule','modules/model/todo'],function
 	console.log(todoModel.get('title'));
 	console.log(todoModel.get('completed'));
 	todoModel.set("title", "myTitle");
+	todoModel.set("completed", true);
+	/*
 	console.log(todoModel.get('title'));
 	todoModel.set({ 
 	  title: "Both attributes set through Model.set().",
 	  completed: true
 	});
 	console.log(todoModel);
+	*/
 	
 });
 /*

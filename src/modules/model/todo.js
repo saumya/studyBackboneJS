@@ -5,15 +5,23 @@ define('modules/model/todo',function(){
 	  // Default todo attribute values
 	  initialize: function(){
 	      console.log('This model has been initialized.');
-	       this.on('change', this.onModelChange);//adding event handlers
+	       this.on('change', this.onModelChange,this);//adding event handlers
 	  },
 	  defaults: {
 	    title: 'DefaultTitle',
 	    completed: false
 	  },
 	  onModelChange : function(ev){
-	  	console.log('on Model Change');
-	  	console.log(ev);
+	  	console.log('---------------');
+	  	console.log('Todo : onModelChange : ');
+	  	//console.log(ev);
+	  	//checking for what is changed
+	  	if(ev.changed.title)
+	  	{
+	  		console.log('TITLE is changed');
+	  	}else{
+	  		console.log('COMPLETED is changed');
+	  	}
 	  	console.log('---------------');
 	  }
 	});
